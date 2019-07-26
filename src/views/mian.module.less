@@ -1,3 +1,17 @@
 .main {
-  text-align: center;
+  position: absolute;
+  width: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: -100px;
+  padding: 20px;
+  box-shadow: 0 0 3px gray;
+  transition: all 0.3s;
+
+  :global{
+    .ant-tabs-nav-scroll {
+      text-align: center;
+    }
+  }
 }

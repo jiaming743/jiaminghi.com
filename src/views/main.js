@@ -1,24 +1,21 @@
 import React from 'react'
 import styles from './mian.module.less'
+
+import Register from '../components/Register'
+import RetrievePassword from '../components/Register'
+
 import { Tabs } from 'antd'
 const { TabPane } = Tabs
-
-function callback(key) {
-  console.log(key)
-}
 
 export default () => {
   return (
     <div className={styles.main}>
-      <Tabs defaultActiveKey="1" onChange={callback}>
-        <TabPane tab="Tab 1" key="1">
-          Content of Tab Pane 1
+      <Tabs type="card" defaultActiveKey="1">
+        <TabPane tab="Register" key="1">
+          <Register />
         </TabPane>
-        <TabPane tab="Tab 2" key="2">
-          Content of Tab Pane 2
-        </TabPane>
-        <TabPane tab="Tab 3" key="3">
-          Content of Tab Pane 3
+        <TabPane tab="Retrieve password" key="2">
+          <RetrievePassword />
         </TabPane>
       </Tabs>
     </div>
